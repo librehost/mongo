@@ -34,7 +34,7 @@ services:
       - "shipy.stack.service.version=${SHIPY_STACK_SERVICE_1_VERSION:-latest}"
     #command: --logLevel=DEBUG
     healthcheck:
-      test: "echo 'db.runCommand("ping").ok' | mongo localhost:27017/test --quiet"
+      test: "echo 'db.runCommand(\"ping\").ok' | mongo localhost:27017/test --quiet"
       interval: 10s
       timeout: 10s
       retries: 3
