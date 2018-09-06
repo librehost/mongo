@@ -11,6 +11,7 @@ services:
     volumes:
       - mongoconf:/etc/mongo
       - mongodata:/data/db
+      - mongoconfsvr:/data/configdb
     networks:
       database:
         aliases:
@@ -42,6 +43,7 @@ services:
 
 volumes:
   mongoconf:
+  mongoconfsvr:
   mongodata:
 
 networks:
