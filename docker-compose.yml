@@ -15,9 +15,8 @@ services:
     networks:
       database:
         aliases:
-         - ${COMPOSE_PROJECT_NAME:?err}
+         # alias with pattern PROJECTNAME_SERVICENAME must be present on all networks
          - ${COMPOSE_PROJECT_NAME:?err}_mongo
-         - ${COMPOSE_PROJECT_NAME:?err}_mongodb
     env_file:
       - .env
     # environment overrides env_files vars
